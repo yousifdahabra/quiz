@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { startQuiz, submitAnswer, calculateScore } from '../../redux/quizSlice';
 import Question from './../../components/Question/';
+import './style.css';
 
 const QuizPage = () => {
     const { quizId } = useParams();
