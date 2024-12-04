@@ -11,6 +11,11 @@ const QuizList = () => {
     useEffect(() => {
         dispatch(setQuizzes(quizzesData));
     }, [dispatch]);
+    return (
+        <div className="quiz-list">
+          <h1>Select a Quiz</h1>
+         </div>
+      );
     
 }
 
