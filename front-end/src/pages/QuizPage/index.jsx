@@ -19,7 +19,13 @@ const QuizPage = () => {
         navigate('/result');
       };
     
-
+      return (
+        <div className="quiz-page">
+          <h1>{quiz?.title}</h1>
+           <button onClick={handleSubmit}>Submit Quiz</button>
+        </div>
+      );
+    
 }
 
 export default QuizPage;
