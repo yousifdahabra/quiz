@@ -10,7 +10,15 @@ const QuizPage = () => {
     const dispatch = useDispatch();
     const quiz = useSelector((state) => state.quiz.quizzes.find((q) => q.id === quizId));
     const userAnswers = useSelector((state) => state.quiz.userAnswers);
-
+    useEffect(() => {
+        if (quiz) dispatch(startQuiz(quiz));
+      }, [dispatch, quiz]);
+    
+      const handleSubmit = () => {
+        dispatch(calculateScore());
+        navigate('/result');
+      };
+    
 
 }
 
