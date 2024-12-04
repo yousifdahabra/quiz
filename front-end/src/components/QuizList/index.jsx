@@ -6,7 +6,12 @@ import quizzesData from '../../data/quizzes.json';
 
 
 const QuizList = () => {
-
+    const dispatch = useDispatch();
+    const quizzes = useSelector((state) => state.quiz.quizzes);
+    useEffect(() => {
+        dispatch(setQuizzes(quizzesData));
+    }, [dispatch]);
+    
 }
 
 
