@@ -1,3 +1,6 @@
-.quiz-page {
+.quiz-question {
     text-align: center;
+    margin-bottom: 3.2rem;
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid #eee;
   }

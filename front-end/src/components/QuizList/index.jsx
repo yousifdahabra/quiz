@@ -15,7 +15,7 @@ const QuizList = () => {
     return (
         <div className="quiz-list">
           <h1>Select a Quiz</h1>
-          <div className="quiz-container">
+          <div className="quiz-question">
             {quizzes.map((quiz) => (
               <Link key={quiz.id} to={`/quiz/${quiz.id}`} className="quiz-card">
                 {quiz.title}
