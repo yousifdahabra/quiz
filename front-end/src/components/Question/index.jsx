@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 
-const Question = () => {
+const Question = ({ question, userAnswer, onAnswer }) => {
 
     return (
         <>
