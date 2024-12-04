@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 
 const Question = ({ question, userAnswer, onAnswer }) => {
+    const { type, question: questionTitle, options } = question;
+
     return (
         <div className="question">
-            <p>{qText}</p>
+            <p>{questionTitle}</p>
 
         </div>
     );
