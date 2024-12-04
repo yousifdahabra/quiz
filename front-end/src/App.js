@@ -1,4 +1,5 @@
 import './ui/styles/App.css';
+import './ui/styles/quiz.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import QuizList from './components/QuizList';
 import QuizPage from './pages/QuizPage';
