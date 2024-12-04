@@ -22,7 +22,15 @@ const QuizPage = () => {
       return (
         <div className="quiz-page">
           <h1>{quiz?.title}</h1>
-           <button onClick={handleSubmit}>Submit Quiz</button>
+          {quiz?.questions.map((q) => (
+            <Question
+              key={q.id}
+              question={q}
+              userAnswer={userAnswers[q.id]}
+              onAnswer={(answer) => dispatch(submitAnswer({ questionId: q.id, answer }))}
+            />
+          ))}
+          <button onClick={handleSubmit}>Submit Quiz</button>
         </div>
       );
     
