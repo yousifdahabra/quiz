@@ -22,7 +22,19 @@ const quizSlice = createSlice({
         const { questionId, answer } = action.payload;
         state.userAnswers[questionId] = answer;
       },
-     
+      calculateScore: (state) => {
+        const currentQuiz = state.currentQuiz;
+        if (!currentQuiz) return;
+  
+        let score = 0;
+        currentQuiz.questions.forEach((q) => {
+          if (state.userAnswers[q.id] === q.answer) {
+            score++;
+          }
+        });
+  
+        state.score = score;
+      },
     },
   });
   
