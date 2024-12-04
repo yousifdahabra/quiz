@@ -4,9 +4,11 @@ import QuizList from './components/QuizList';
 import QuizPage from './pages/QuizPage';
 import Result from './components/Result';
 import { Provider } from 'react-redux';
-
+import store from './redux/store';
 function App() {
   return (
+    <Provider store={store}>
+
     <Router>
       <Routes>
         <Route path="/" element={<QuizList />} />
@@ -14,6 +16,7 @@ function App() {
         <Route path="/result" element={<Result />} />
       </Routes>
     </Router>
+    </Provider>
 
 );
 }
