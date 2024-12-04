@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import QuizList from './components/QuizList';
 import QuizPage from './pages/QuizPage';
 import Result from './components/Result';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
