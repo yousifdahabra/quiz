@@ -1,3 +1,10 @@
+  .question{
+    margin-bottom: 3.2rem;
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid var(--smoke);
+  }
+  
+  
   /* Buttons */
   button {
     padding: 0.75rem 1.5rem;
