@@ -14,7 +14,14 @@ const QuizList = () => {
     return (
         <div className="quiz-list">
           <h1>Select a Quiz</h1>
-         </div>
+          <div className="quiz-container">
+            {quizzes.map((quiz) => (
+              <Link key={quiz.id} to={`/quiz/${quiz.id}`} className="quiz-card">
+                {quiz.title}
+              </Link>
+            ))}
+          </div>
+        </div>
       );
     
 }
