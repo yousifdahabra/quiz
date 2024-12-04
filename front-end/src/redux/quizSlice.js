@@ -13,7 +13,12 @@ const quizSlice = createSlice({
       setQuizzes: (state, action) => {
         state.quizzes = action.payload;
       },
-       
+      startQuiz: (state, action) => {
+        state.currentQuiz = action.payload;
+        state.userAnswers = {};
+        state.score = 0;
+      },
+      
     },
   });
   
