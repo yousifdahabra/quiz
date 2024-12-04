@@ -18,7 +18,11 @@ const quizSlice = createSlice({
         state.userAnswers = {};
         state.score = 0;
       },
-      
+      submitAnswer: (state, action) => {
+        const { questionId, answer } = action.payload;
+        state.userAnswers[questionId] = answer;
+      },
+     
     },
   });
   
