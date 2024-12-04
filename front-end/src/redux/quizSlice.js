@@ -6,3 +6,10 @@ const initialState = {
   userAnswers: {},
   score: 0,
 };
+const quizSlice = createSlice({
+    name: "quiz",
+    initialState,
+    reducers: {
+     },
+  });
+  
