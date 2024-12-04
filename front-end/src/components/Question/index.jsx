@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import './style.css';
 
 const Question = ({ question, userAnswer, onAnswer }) => {
     const { type, question: questionTitle, options } = question;
