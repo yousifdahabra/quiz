@@ -29,7 +29,7 @@ export const login = async (req,res) => {
     } catch (error) {
         console.log(error.message)
         res.status(500).send({
-            message:"something wan't wrong"
+            message:"something went wrong"
         })
 
     }
