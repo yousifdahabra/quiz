@@ -5,7 +5,7 @@ import connectToDatabase from "./db/connection.js";
 
 const app = express();
 app.use(express.json())
-app.use(
+app.use( 
     cors({
         origin:"*",
     })
