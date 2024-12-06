@@ -4,3 +4,6 @@ import { login } from "./auth.conreoller";
 const authRouter = new Router();
 
 authRouter.post("/login",login)
+
+
+export default authRouter
