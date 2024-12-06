@@ -3,6 +3,12 @@ import dotenv from "dotenv"
 
 const app = express();
 app.use(express.json())
+app.use(
+    cors({
+        origin:"*",
+    })
+);
+
 dotenv.config()
 
 app.listen(process.env.SERVER_PORT, ()=>{
