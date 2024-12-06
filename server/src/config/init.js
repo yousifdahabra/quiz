@@ -13,3 +13,11 @@ export const init = (app) =>{
     );
     
 }
+
+export const registerRoutes = (app,...params) =>{
+    params.forEach((router)=>{
+
+    });
+}
+
+
