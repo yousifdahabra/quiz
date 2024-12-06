@@ -10,7 +10,7 @@ const Result = () => {
         <p>
             You scored {score} out of {totalQuestions}
         </p>
-        <Link to="/">Back to Quiz List</Link>
+        <Link to="/quiz_list">Back to Quiz List</Link>
         </div>
     );
 
