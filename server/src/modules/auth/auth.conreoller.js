@@ -3,10 +3,10 @@ import { User } from "../../db/models/user.model.js";
 import jwt from "jsonwebtoken"
 
 export const login = async (req,res) => {
-    const {username,password} = req.body;
+    const {email,password} = req.body;
 
     try {
-        const user = await User.findOne({username}).select("+password")
+        const user = await User.findOne({email}).select("+password")
         if(!user){
             return res.status(400).send({
                 message:"Invalid credntials"
@@ -37,12 +37,12 @@ export const login = async (req,res) => {
 
 }
 export const register = async (req,res) => {
-    const {username,password} = req.body;
+    const {email,password} = req.body;
 
     try {
         const hashed = await bcrypt.hash(password,10)
         const user = await User.create({
-            username,password:hashed,
+            email,password:hashed,
         })
         res.status(201).send({
             message:"new user",
