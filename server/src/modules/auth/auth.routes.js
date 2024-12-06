@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { login } from "./auth.conreoller";
+import { login } from "./auth.conreoller.js";
 
 const authRouter = new Router();
 
