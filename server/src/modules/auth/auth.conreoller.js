@@ -10,9 +10,17 @@ export const register = async (req,res) => {
     try {
         const hashed = await bcrypt.hash(password,10)
         const user = await User.create({
-            username,password
+            username,password:hashed,
         })
+        res.status(201).send({
+            message:"new user",
+            user
+        })
+
     } catch (error) {
-        
+        console.log(error.message)
+        res.status(500).send({
+            message:"something wan't wrong"
+        })
     }
 }
